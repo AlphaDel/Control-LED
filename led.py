@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import httplib, urllib, requests
 from time import sleep
-#from ds18b20 import DS18B20
 import RPi.GPIO as GPIO
 import time
 import string
@@ -22,28 +21,15 @@ GPIO.setup(15, GPIO.OUT)
 
 
 def main():
-    #sensor = DS18B20()
 
-        
-    
     while True:
-        #temperatures = sensor.get_temperatures([DS18B20.DEGREES_C, DS18B20.DEGREES_F, DS18B20.KELVIN])
-
-        #print("Kelvin: %f" % temperatures[2])
-        #print("Degrees Celsius: %f" % temperatures[0])
-        #print("Degrees Fahrenheit: %f" % temperatures[1])
-        
-        #sleep(5)
 
    	baseURL = 'https://api.thingspeak.com/channels/115690/fields/1/last' 
 	
         try:
-
 		f = requests.get(baseURL)
 		print f.text
-			
-
-                
+		
                 if f.text == '10':
                         GPIO.output(11, GPIO.HIGH) # led 1 off
                         print("led 1 off!!!")
@@ -80,16 +66,12 @@ def main():
                         print("LED on all !!!")
                 else:
                         print ("not found command")
-                
-                
-                print '==========================================='
-            	
+                 
+                print '==========================================='  	
                 f.close()
             	sleep(5)
         except:
-
                print 'exit.'
-         
                break;
         
 
