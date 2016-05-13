@@ -19,7 +19,7 @@ sudo python led.py
 ## Control
 This is my ThingSpeak account you can register account free from www.thingspeak.com and setting somthing but it easy
 go to websit https://api.thingspeak.com/update?api_key=GWHB4M9HGNS2Y5VM&field1=XXX
-You can replace XXX by digit.
+You can replace ```bash XXX ``` by digit.
 
 ```bash
 Means of digit
