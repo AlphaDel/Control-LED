@@ -19,7 +19,7 @@ def main():
 
     while True:
 
-   	baseURL = 'https://api.thingspeak.com/channels/115690/fields/1/last' 
+   	baseURL = 'https://api.thingspeak.com/channels/xxxx/fields/1/last' # xxxx = your channel id
 	
         try:
 		f = requests.get(baseURL)
