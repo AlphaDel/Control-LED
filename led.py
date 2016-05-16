@@ -55,9 +55,9 @@ def main():
                         print("LED on all !!!")
                 else:
                         print ("not found command")
-                print '==========================================='  	
-                f.close()
-            	sleep(5)
+                	print '==========================================='  	
+                	f.close()
+            		sleep(5)
         except:
                print 'exit.'
                break;
